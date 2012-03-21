@@ -15,7 +15,7 @@ check_projects()
     do
         if [ "$(echo $EXIST_PROJECTS | grep $CHECK_PROJECT )" = "" ]
         then
-            echo "Clone project $CHECK_PROJECT"
+            echo "Project $CHECK_PROJECT - git clone "
             clone_project "$CHECK_PROJECT"
         fi
     done

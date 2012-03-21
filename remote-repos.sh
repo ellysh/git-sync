@@ -7,7 +7,6 @@
 
 # This names are the same as hostnames with gitolite to sync
 REMOTE_REPOS="git.st svn2"
-#REMOTE_REPOS="aaa svn2"
 
 
 check_repos()
@@ -24,7 +23,7 @@ check_repos()
     do
         if [ "$(echo $EXIST_REPOS | grep $CHECK_REPO )" = "" ]
         then
-            echo "Add remote repo $CHECK_REPO to project $PROJECT"
+            echo "Project $PROJECT - add remote repo $CHECK_REPO"
             add_repo "$CHECK_REPO" "$PROJECT"
         fi
     done

@@ -13,3 +13,7 @@ $BIN_DIR/ssh-keys.sh
 $BIN_DIR/local-projects.sh
 
 $BIN_DIR/remote-repos.sh
+
+$BIN_DIR/origin-pull.sh
+
+#$BIN_DIR/repos-push.sh
