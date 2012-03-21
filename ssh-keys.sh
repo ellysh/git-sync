@@ -15,6 +15,7 @@ check_ssh_keys()
     do
         if [ "$(echo $SSH_AGENT_KEYS | grep $CHECK_KEY )" = "" ]
         then
+            # FIXME: Add the missing key only here
             return 0
         fi
     done
