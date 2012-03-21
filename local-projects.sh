@@ -1,11 +1,9 @@
 #!/bin/sh
 
-# Script for check and clone projects
-# to local directory
+# Script for check and clone projects to local directory
 
+. configure.sh
 
-PROJECTS="libplanar mxu11x0 planar-display planar-editor pui"
-PROJECTS_DIR="/home/ilya/sync"
 ORIGIN_REPO="git@github.com:ellysh"
 
 

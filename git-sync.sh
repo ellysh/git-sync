@@ -11,3 +11,5 @@ BIN_DIR="./"
 $BIN_DIR/ssh-keys.sh
 
 $BIN_DIR/local-projects.sh
+
+$BIN_DIR/remote-repos.sh
