@@ -3,20 +3,27 @@
 # Script for synchronisation git repositories
 
 
-BIN_DIR="./"
+BIN_DIR="./src"
 
-. configure.sh
+. "$BIN_DIR/configure.sh"
+. "$BIN_DIR/functions.sh"
 
 # FIXME: Check for dependecy application (git-core, etc...)
 
 # FIXME: Implement sync for several branch (add branch list variable)
 
-$BIN_DIR/ssh-keys.sh
+cd_safe $BIN_DIR
 
-$BIN_DIR/local-projects.sh
 
-$BIN_DIR/remote-repos.sh
+ssh-keys.sh
 
-$BIN_DIR/origin-pull.sh
+local-projects.sh
 
-$BIN_DIR/repos-push.sh
+remote-repos.sh
+
+origin-pull.sh
+
+repos-push.sh
+
+
+restore_directory
