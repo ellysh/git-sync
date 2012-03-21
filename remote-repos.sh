@@ -5,9 +5,6 @@
 . configure.sh
 . functions.sh
 
-# This names are the same as hostnames with gitolite to sync
-REMOTE_REPOS="git.st svn2"
-
 
 check_repos()
 {
@@ -23,7 +20,7 @@ check_repos()
     do
         if [ "$(echo $EXIST_REPOS | grep $CHECK_REPO )" = "" ]
         then
-            echo "Project $PROJECT - add remote repo $CHECK_REPO"
+            echo "${bldwht}Project $PROJECT - git remote add repo $CHECK_REPO$(tput sgr0)"
             add_repo "$CHECK_REPO" "$PROJECT"
         fi
     done

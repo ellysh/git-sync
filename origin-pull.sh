@@ -13,11 +13,13 @@ check_origin_diff()
     [ "$PROJECT" = "" ] && return 0
 
     cd_safe "$PROJECTS_DIR/$PROJECT"
+
+    echo "${bldwht}Project $PROJECT - git fetch origin$(tput sgr0)"
     git fetch origin
 
     if [ "$(git diff origin/master)" != "" ]
     then
-        echo "Project $PROJECT - pull origin"
+        echo "${bldwht}Project $PROJECT - git pull origin master$(tput sgr0)"
         git pull origin master
     fi
 
