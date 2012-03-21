@@ -1,29 +1,32 @@
 # Git-sync README
 
-
-1. INTRODUCTION
+## INTRODUCTION
 
 This is scripts for git remote repositories synchronization.
 Now it works only with gitolite git servers (as github.com).
 
-
-2. HOW IT WORKS
+## HOW IT WORKS
 
 This scripts perform next work:
-1) Clone the origin remote repository of specified projects to local direcotories.
-2) Add custom remote repositories for each project directory.
-3) Update the local master branch
-4) Push the master branch to custom remote repositories
 
+  * Clone the origin remote repository of specified projects to local
+direcotories.
 
-3. CONFIGURE
+  * Add custom remote repositories for each project directory.
+
+  * Update the local master branch.
+
+  * Push the master branch to custom remote repositories.
+
+## CONFIGURE
 
 For correct work do:
-1) Set correct project names and project directory in src/configure.sh file
-2) Set hostname of git servers with the custom remote repositories in src/configure.sh file
-3) Set the origin repository hostname in local-projects.sh file
-4) Set the necessaries ssh keys in ssh-keys.sh file
 
- --
- Ilya Shpigor
- petrsum@gmail.com
+  * Set correct project names and project directory in src/configure.sh file.
+
+  * Set hostname of git servers with the custom remote repositories in
+src/configure.sh file.
+
+  * Set the origin repository hostname in local-projects.sh file.
+
+  * Set the necessaries ssh keys in ssh-keys.sh file.
