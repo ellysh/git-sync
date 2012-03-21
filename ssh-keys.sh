@@ -15,26 +15,19 @@ check_ssh_keys()
     do
         if [ "$(echo $SSH_AGENT_KEYS | grep $CHECK_KEY )" = "" ]
         then
-            # FIXME: Add the missing key only here
-            return 0
+            add_ssh_key $CHECK_KEY
         fi
     done
-
-    return 1
 }
 
-add_ssh_keys()
+add_ssh_key()
 {
-    for ADD_KEY in $SSH_KEYS
-    do
-        ssh-add "$SSH_KEY_PATH/$ADD_KEY"
-    done
+    ADD_KEY="$1"
+
+    [ "$ADD_KEY" = "" ] && return 0
+
+    ssh-add "$SSH_KEY_PATH/$ADD_KEY"
 }
 
 
 check_ssh_keys
-if [ "$?" -eq "0" ]
-then
-    echo "Input ssh keys..."
-    add_ssh_keys
-fi
