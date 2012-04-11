@@ -4,7 +4,7 @@
 
 . configure.sh
 
-ORIGIN_REPO="git@github.com:ellysh"
+ORIGIN_REPO="git@svn2"
 
 
 check_projects()
@@ -27,7 +27,7 @@ clone_project()
 
     [ "$CLONE_PROJECT" = "" ] && return 0
 
-    git clone "$ORIGIN_REPO/$CLONE_PROJECT" "$PROJECTS_DIR/$CLONE_PROJECT"
+    git clone "$ORIGIN_REPO:$CLONE_PROJECT" "$PROJECTS_DIR/$CLONE_PROJECT"
 }
 
 
