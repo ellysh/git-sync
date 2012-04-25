@@ -2,8 +2,8 @@
 
 # The global constants used in several scripts
 
-PROJECTS="step-controller libserial libatom libplanar mxu11x0 \
-          planar-display planar-editor pui pui-keyboard pui-test mems-gyroscope"
+PROJECTS="step-controller libserial libatom libplanar mxu11x0 planar-display \
+          planar-editor pui pui-keyboard pui-test mems-gyroscope simunit"
 PROJECTS_DIR="/home/ilya/sync"
 
 # This names are the same as hostnames with gitolite to sync
