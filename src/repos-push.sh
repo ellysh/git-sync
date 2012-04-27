@@ -2,8 +2,8 @@
 
 # Script for push to remote repos
 
-. configure.sh
-. functions.sh
+. ./configure.sh
+. ./functions.sh
 
 
 repos_push()

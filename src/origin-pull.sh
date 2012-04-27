@@ -2,8 +2,8 @@
 
 # Script for pull origin repo for all projects
 
-. configure.sh
-. functions.sh
+. ./configure.sh
+. ./functions.sh
 
 
 check_origin_diff()

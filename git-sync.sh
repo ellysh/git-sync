@@ -14,16 +14,17 @@ BIN_DIR="./src"
 
 cd_safe $BIN_DIR
 
+echo $(pwd)
 
-ssh-keys.sh
+./ssh-keys.sh
 
-local-projects.sh
+./local-projects.sh
 
-remote-repos.sh
+./remote-repos.sh
 
-origin-pull.sh
+./origin-pull.sh
 
-repos-push.sh
+./repos-push.sh
 
 
 restore_directory

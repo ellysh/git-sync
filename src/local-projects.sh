@@ -2,7 +2,7 @@
 
 # Script for check and clone projects to local directory
 
-. configure.sh
+. ./configure.sh
 
 ORIGIN_REPO="git@svn2"
 
