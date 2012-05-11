@@ -4,7 +4,7 @@
 # remote git repositories
 
 
-SSH_KEYS="github_rsa elly"
+SSH_KEYS="github elly"
 SSH_KEY_PATH="/home/ilya/.ssh"
 
 check_ssh_keys()
