@@ -9,6 +9,7 @@ then
     CONFIG_DIR="../conf"
 fi
 
+. "$CONFIG_DIR/git-sync.conf"
 
 if [ -n "$1" ]
 then
@@ -17,18 +18,11 @@ then
     PROJECTS="$(ls "$PROJECTS_DIR")"
     REMOTE_REPOS="origin"
 else
-    # FIXME: Read this data from config file
-    PROJECTS_DIR="/srv/sync"
     PROJECTS=$(cat "$CONFIG_DIR/projects.conf")
     REMOTE_REPOS=$(cat "$CONFIG_DIR/repository.conf")
 fi
 
-# Variables for the ssh-keys.sh script
-SSH_KEY_PATH="/home/ilya/.ssh"
 SSH_KEYS=$(cat "$CONFIG_DIR/keys.conf")
-
-# Variables for the local-projects.sh script
-ORIGIN_REPO="git@svn2"
 
 # Text color variables
 txtund=$(tput sgr 0 1)          # Underline
