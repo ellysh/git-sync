@@ -1,5 +1,6 @@
 *.sh~
 *.mkd~
+Makefile~
 
 # debian build files
 debian/*~
