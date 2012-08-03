@@ -19,8 +19,7 @@ deb-clean:
 	find . -name "*.1" | xargs rm -f
 
 	-rm -rf ${DEBIAN_DIR}/buildroot
-	-rm -rf ${DEBIAN_DIR}/libserial
-	-rm -rf ${DEBIAN_DIR}/libserial-dev
+	-rm -rf ${DEBIAN_DIR}/git-sync
 	find ${DEBIAN_DIR} -name "*.log" | xargs rm -f
 	find ${DEBIAN_DIR} -name "*.substvars" | xargs rm -f
 
