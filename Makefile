@@ -3,6 +3,12 @@ DEBIAN_DIR=debian
 
 all:
 
+install:
+	mkdir -p ${DESTDIR}/usr/bin
+	cp *.sh ${DESTDIR}/usr/bin
+	mkdir -p ${DESTDIR}/usr/share/git-sync
+	cp src/*.sh ${DESTDIR}/usr/share/git-sync
+
 deb: deb-clean
 	mkdir -p ${DEB_DIR}
 	dpkg-buildpackage -rfakeroot -b -us -uc
