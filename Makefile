@@ -8,6 +8,8 @@ install:
 	cp *.sh ${DESTDIR}/usr/bin
 	mkdir -p ${DESTDIR}/usr/share/git-sync
 	cp src/*.sh ${DESTDIR}/usr/share/git-sync
+	mkdir -p ${DESTDIR}/etc/git-sync
+	cp conf/* ${DESTDIR}/etc/git-sync
 
 deb: deb-clean
 	mkdir -p ${DEB_DIR}

@@ -4,6 +4,7 @@
 
 . ./configure.sh
 
+# FIXME: Read this data from config file
 ORIGIN_REPO="git@svn2"
 
 

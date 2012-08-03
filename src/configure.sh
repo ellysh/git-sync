@@ -2,6 +2,14 @@
 
 # The global constants used in several scripts
 
+CONFIG_DIR="/etc/git-sync"
+
+if [ ! -d "$CONFIG_DIR" ]
+then
+    CONFIG_DIR="../conf"
+fi
+
+
 if [ -n "$1" ]
 then
     # Data for the git-pull.sh and git-push.sh scripts
@@ -11,10 +19,7 @@ then
 else
     # FIXME: Read this data from config file
     PROJECTS_DIR="/srv/sync"
-    PROJECTS="step-controller libserial libatom libplanar mxu11x0 planar-display \
-              planar-editor pui pui-keyboard pui-test mems-gyroscope simunit \
-              uso-iso d2k-dask pci-dask pci429-4 libmysql-state kts25sm ece-0206 \
-              libarinc arinc-test simscreen simtool skt-calibration"
+    PROJECTS=$(cat "$CONFIG_DIR/repository")
 
     # This names are the same as hostnames with gitolite to sync
     REMOTE_REPOS="git.st"
