@@ -19,8 +19,8 @@ then
 else
     # FIXME: Read this data from config file
     PROJECTS_DIR="/srv/sync"
-    PROJECTS=$(cat "$CONFIG_DIR/projects")
-    REMOTE_REPOS=$(cat "$CONFIG_DIR/repository")
+    PROJECTS=$(cat "$CONFIG_DIR/projects.conf")
+    REMOTE_REPOS=$(cat "$CONFIG_DIR/repository.conf")
 fi
 
 # Text color variables
