@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Script for update subdirs git repositories
+# Script for update subdirs local git repositories
 
 
 BIN_DIR="./src"
