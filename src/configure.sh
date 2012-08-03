@@ -19,10 +19,8 @@ then
 else
     # FIXME: Read this data from config file
     PROJECTS_DIR="/srv/sync"
-    PROJECTS=$(cat "$CONFIG_DIR/repository")
-
-    # This names are the same as hostnames with gitolite to sync
-    REMOTE_REPOS="git.st"
+    PROJECTS=$(cat "$CONFIG_DIR/projects")
+    REMOTE_REPOS=$(cat "$CONFIG_DIR/repository")
 fi
 
 # Text color variables
