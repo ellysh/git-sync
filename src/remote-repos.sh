@@ -36,7 +36,12 @@ add_repo()
 
     cd_safe "$PROJECTS_DIR/$PROJECT"
 
-    git remote add "$ADD_REPO" "git@$ADD_REPO:$PROJECT"
+    if [ "$ADD_REPO" != "github" ]
+    then
+        git remote add "$ADD_REPO" "git@$ADD_REPO:$PROJECT"
+    else
+        git remote add "$ADD_REPO" "git@$ADD_REPO:$GITHUB_USER/$PROJECT.git"
+    fi
 
     restore_directory
 }

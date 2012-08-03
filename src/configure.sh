@@ -6,7 +6,11 @@ CONFIG_DIR="/etc/git-sync"
 
 if [ ! -d "$CONFIG_DIR" ]
 then
-    CONFIG_DIR="../conf"
+    CONFIG_DIR="./conf"
+    if [ ! -d "$CONFIG_DIR" ]
+    then
+        CONFIG_DIR="../conf"
+    fi
 fi
 
 . "$CONFIG_DIR/git-sync.conf"
