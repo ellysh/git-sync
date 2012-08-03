@@ -1,9 +1,8 @@
 #!/bin/sh
 
-# Script to pull origin for local git repositories in the subdirs
+# Script to push origin for local git repositories in the subdirs
 #
-# Example: git-pull.sh /home/user/Projects
-
+# Example: git-push.sh /home/user/Projects
 
 BIN_DIR="./src"
 
@@ -20,6 +19,6 @@ echo $(pwd)
 
 ./ssh-keys.sh
 
-./origin-pull.sh "$PROJECTS_DIR"
+./repos-push.sh "$PROJECTS_DIR"
 
 restore_directory
