@@ -23,6 +23,13 @@ else
     REMOTE_REPOS=$(cat "$CONFIG_DIR/repository.conf")
 fi
 
+# Variables for the ssh-keys.sh script
+SSH_KEY_PATH="/home/ilya/.ssh"
+SSH_KEYS=$(cat "$CONFIG_DIR/keys.conf")
+
+# Variables for the local-projects.sh script
+ORIGIN_REPO="git@svn2"
+
 # Text color variables
 txtund=$(tput sgr 0 1)          # Underline
 txtbld=$(tput bold)             # Bold

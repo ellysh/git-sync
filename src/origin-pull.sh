@@ -5,7 +5,6 @@
 . ./configure.sh
 . ./functions.sh
 
-
 check_origin_diff()
 {
     PROJECT="$1"

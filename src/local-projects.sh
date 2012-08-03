@@ -4,10 +4,6 @@
 
 . ./configure.sh
 
-# FIXME: Read this data from config file
-ORIGIN_REPO="git@svn2"
-
-
 check_projects()
 {
     EXIST_PROJECTS=$(ls $PROJECTS_DIR)

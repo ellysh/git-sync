@@ -3,9 +3,7 @@
 # Script for check and add the ssh keys for
 # remote git repositories
 
-# FIXME: Read this data from config file
-SSH_KEYS="github elly"
-SSH_KEY_PATH="/home/ilya/.ssh"
+. ./configure.sh
 
 check_ssh_keys()
 {
