@@ -10,7 +10,7 @@ debian/*.substvars
 debian/git-sync/
 install_manifest.txt
 *.1
-bin/deb/
 build-stamp
 configure-stamp
 debian/files
+deb/

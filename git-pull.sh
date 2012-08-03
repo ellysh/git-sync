@@ -4,8 +4,12 @@
 #
 # Example: git-pull.sh /home/user/Projects
 
+BIN_DIR="/usr/share/git-sync"
 
-BIN_DIR="./src"
+if [ ! -d "$BIN_DIR" ]
+then
+    BIN_DIR="./src"
+fi
 
 . "$BIN_DIR/configure.sh"
 . "$BIN_DIR/functions.sh"
