@@ -1,4 +1,4 @@
-# Git-sync README
+# Git-sync 1.5 README
 
 ## INTRODUCTION
 
@@ -7,26 +7,45 @@ Now it works only with gitolite git servers (as github.com).
 
 ## HOW IT WORKS
 
-This scripts perform next work:
+This scripts perform next steps:
 
-  * Clone the origin remote repository of specified projects to local
-direcotories.
+  * Clone the original remote repositories of specified projects to
+local project direcotories.
 
   * Add custom remote repositories for each project directory.
 
-  * Update the local master branch.
+  * Update the local repositories master branch.
 
-  * Push the master branch to custom remote repositories.
+  * Push the local repositories master branch to custom remote
+repositories.
 
 ## CONFIGURE
 
-For correct work do:
+Specify for configuration you repositories next data:
 
-  * Set correct project names and project directory in src/configure.sh file.
+  * Set project names in conf/projects.conf file.
 
-  * Set hostname of git servers with the custom remote repositories in
-src/configure.sh file.
+  * Set hostnames of git servers in conf/servers.conf file.
 
-  * Set the origin repository hostname in local-projects.sh file.
+  * Set the original git server hostname (ORIGIN_REPO) in
+conf/git-sync.conf file.
 
-  * Set the necessaries ssh keys in ssh-keys.sh file.
+  * Set local directory for temporary files (PROJECTS_DIR) in
+conf/git-sync.conf file.
+
+  * Set path of ssh keys files (SSH_KEY_PATH) in conf/git-sync.conf file.
+
+  * Set github username (GITHUB_USER) in conf/git-sync.conf file.
+
+  * Set ssh keys file names in conf/keys.conf file.
+
+
+## INSTALL
+
+You can build deb package with git-sync application:
+
+$ make deb
+
+Also you can install git-sync to your system from sources:
+
+# make install

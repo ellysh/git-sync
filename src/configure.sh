@@ -23,7 +23,7 @@ then
     REMOTE_REPOS="origin"
 else
     PROJECTS=$(cat "$CONFIG_DIR/projects.conf")
-    REMOTE_REPOS=$(cat "$CONFIG_DIR/repository.conf")
+    REMOTE_REPOS=$(cat "$CONFIG_DIR/servers.conf")
 fi
 
 SSH_KEYS=$(cat "$CONFIG_DIR/keys.conf")

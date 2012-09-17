@@ -1,7 +1,6 @@
 #!/bin/sh
 
-# Script for check and add the ssh keys for
-# remote git repositories
+# Script for check and add the ssh keys for git servers
 
 . ./configure.sh
 
