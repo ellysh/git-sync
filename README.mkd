@@ -2,7 +2,7 @@
 
 ## INTRODUCTION
 
-This is scripts for git remote repositories synchronization.
+This is set of scripts for git servers synchronization.
 Now it works only with gitolite git servers (as github.com).
 
 ## HOW IT WORKS
@@ -48,4 +48,4 @@ $ make deb
 
 Also you can install git-sync to your system from sources:
 
-# make install
+$ make install
