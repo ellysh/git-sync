@@ -1,3 +1,9 @@
+git-sync (1.6) maverick; urgency=low
+
+  * Implement synchronising with any type of git repositories (not only gitolite based)
+
+ -- Ilya Shpigor <petrsum@gmail.com>  Mon, 22 Oct 2012 16:39:36 +0400
+
 git-sync (1.5) maverick; urgency=low
 
   * Move configuration from bash scripts to *.conf files

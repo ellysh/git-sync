@@ -1,18 +1,17 @@
-# Git-sync 1.5 README
+# Git-sync 1.6 README
 
 ## INTRODUCTION
 
 This is set of scripts for git servers synchronization.
-Now it works only with gitolite git servers (as github.com).
 
 ## HOW IT WORKS
 
 This scripts perform next steps:
 
-  * Clone the original remote repositories of specified projects to
-local project direcotories.
+  * Clone the original remote repository of specified projects to
+local direcotory.
 
-  * Add custom remote repositories for each project directory.
+  * Add custom remote repositories for each project.
 
   * Update the local repositories master branch.
 
@@ -25,7 +24,8 @@ Specify for configuration you repositories next data:
 
   * Set project names in conf/projects.conf file.
 
-  * Set hostnames of git servers in conf/servers.conf file.
+  * Set hostnames (with username and path) of git servers in conf/servers.conf
+file.
 
   * Set the original git server hostname (ORIGIN_REPO) in
 conf/git-sync.conf file.
@@ -34,8 +34,6 @@ conf/git-sync.conf file.
 conf/git-sync.conf file.
 
   * Set path of ssh keys files (SSH_KEY_PATH) in conf/git-sync.conf file.
-
-  * Set github username (GITHUB_USER) in conf/git-sync.conf file.
 
   * Set ssh keys file names in conf/keys.conf file.
 
