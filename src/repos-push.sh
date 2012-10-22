@@ -13,7 +13,9 @@ repos_push()
 
     cd_safe "$PROJECTS_DIR/$PROJECT"
 
-    for REPO in $REMOTE_REPOS
+    local CURRENT_REMOTE_REPOS="$(git remote | grep -v origin)"
+
+    for REPO in $CURRENT_REMOTE_REPOS
     do
         REPO_NAME=$(get_repo_name $REPO)
 
