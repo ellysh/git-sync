@@ -20,7 +20,6 @@ check_repos()
     do
         if [ "$(echo $EXIST_REPOS | grep $CHECK_REPO )" = "" ]
         then
-            echo "${bldwht}Project $PROJECT - git remote add repo $CHECK_REPO$(tput sgr0)"
             add_repo "$CHECK_REPO" "$PROJECT"
         fi
     done
@@ -33,11 +32,13 @@ add_repo()
 
     [ "$ADD_REPO" = "" ] && return 0
     [ "$PROJECT" = "" ] && return 0
+    [ "$(git ls-remote "$ADD_REPO$PROJECT.git")" = "" ] && return 0
 
     cd_safe "$PROJECTS_DIR/$PROJECT"
 
     REPO_NAME=$(get_repo_name $ADD_REPO)
 
+    echo "${bldwht}Project $PROJECT - git remote add repo $CHECK_REPO$(tput sgr0)"
     git remote add "$REPO_NAME" "$ADD_REPO$PROJECT.git"
 
     restore_directory

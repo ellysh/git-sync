@@ -12,7 +12,6 @@ check_projects()
     do
         if [ "$(echo $EXIST_PROJECTS | grep -w $CHECK_PROJECT )" = "" ]
         then
-            echo "${bldwht}Project $CHECK_PROJECT - git clone$(tput sgr0)"
             clone_project "$CHECK_PROJECT"
         fi
     done
@@ -24,6 +23,7 @@ clone_project()
 
     [ "$CLONE_PROJECT" = "" ] && return 0
 
+    echo "${bldwht}Project $CHECK_PROJECT - git clone$(tput sgr0)"
     git clone "$ORIGIN_REPO$CLONE_PROJECT.git" "$PROJECTS_DIR/$CLONE_PROJECT"
 }
 
