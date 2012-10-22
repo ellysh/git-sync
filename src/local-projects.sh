@@ -24,7 +24,7 @@ clone_project()
 
     [ "$CLONE_PROJECT" = "" ] && return 0
 
-    git clone "$ORIGIN_REPO:$CLONE_PROJECT" "$PROJECTS_DIR/$CLONE_PROJECT"
+    git clone "$ORIGIN_REPO$CLONE_PROJECT.git" "$PROJECTS_DIR/$CLONE_PROJECT"
 }
 
 

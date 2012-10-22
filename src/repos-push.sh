@@ -15,8 +15,10 @@ repos_push()
 
     for REPO in $REMOTE_REPOS
     do
-        echo "${bldgre}Project $PROJECT - git push $REPO master$(tput sgr0)"
-        git push $REPO master
+        REPO_NAME=$(get_repo_name $REPO)
+
+        echo "${bldgre}Project $PROJECT - git push $REPO_NAME master$(tput sgr0)"
+        git push $REPO_NAME master
     done
 
     restore_directory
