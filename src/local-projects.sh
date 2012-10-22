@@ -10,7 +10,7 @@ check_projects()
 
     for CHECK_PROJECT in $PROJECTS
     do
-        if [ "$(echo $EXIST_PROJECTS | grep $CHECK_PROJECT )" = "" ]
+        if [ "$(echo $EXIST_PROJECTS | grep -w $CHECK_PROJECT )" = "" ]
         then
             echo "${bldwht}Project $CHECK_PROJECT - git clone$(tput sgr0)"
             clone_project "$CHECK_PROJECT"
