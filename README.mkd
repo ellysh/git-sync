@@ -54,11 +54,17 @@ Type this command to perform all synchronization operations:
 
 $ git-sync.sh -ils
 
+This is command to "fast" synchronization without initialization local repos:
+
+$ git-sync.sh -ls
+
 git-sync.sh is a main interface script for several service ones.
 These service scripts perform work of each synchronization operation:
 
 git-init.sh - performs cloning of origin remote repos to local directory
+
 git-pull.sh - performs fetch and pull from origin remote repo
+
 git-push.sh - performs push master branch to all custom remote repos
 
 You can use these manually. Just specify for each script argument with
