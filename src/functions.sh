@@ -41,10 +41,23 @@ is_param_exist()
     PARAM="$1"
     CMD="$2"
 
-    if [ "$(echo "$CMD" | grep "$PARAM")" = "" ]
+    if [ -z "$(echo "$CMD" | grep "$PARAM")" ]
     then
         return 1
     else
         return 0
+    fi
+}
+
+is_remote_repo_not_exist()
+{
+    REPO="$1"
+    PROJECT="$2"
+
+    if [ -z "$(echo "$(git ls-remote "$REPO$PROJECT.git")" 2>&1 | grep HEAD)" ]
+    then
+        return 0
+    else
+        return 1
     fi
 }
