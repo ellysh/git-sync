@@ -40,6 +40,7 @@ add_repo()
 
     echo "${bldwht}Project $PROJECT - git remote add repo $CHECK_REPO$(tput sgr0)"
     git remote add "$REPO_NAME" "$ADD_REPO$PROJECT.git"
+    git fetch "$REPO_NAME"
 
     restore_directory
 }
