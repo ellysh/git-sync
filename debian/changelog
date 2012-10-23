@@ -1,3 +1,9 @@
+git-sync (1.7) maverick; urgency=low
+
+  * Implement command line arguments and service scripts
+
+ -- Ilya Shpigor <petrsum@gmail.com>  Tue, 23 Oct 2012 13:21:19 +0400
+
 git-sync (1.6) maverick; urgency=low
 
   * Implement synchronising with any type of git repositories (not only gitolite based)

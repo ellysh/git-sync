@@ -1,4 +1,4 @@
-# Git-sync 1.6 README
+# Git-sync 1.7 README
 
 ## INTRODUCTION
 
@@ -17,6 +17,17 @@ local direcotory.
 
   * Push the local repositories master branch to custom remote
 repositories.
+
+## INSTALL
+
+This application can work without installation.
+But you can build deb package with it:
+
+$ make deb
+
+Also you can install git-sync to your system from sources:
+
+$ make install
 
 ## CONFIGURE
 
@@ -37,13 +48,20 @@ conf/git-sync.conf file.
 
   * Set ssh keys file names in conf/keys.conf file.
 
+## USAGE
 
-## INSTALL
+Type this command to perform all synchronization operations:
 
-You can build deb package with git-sync application:
+$ git-sync.sh -ils
 
-$ make deb
+git-sync.sh is a main interface script for several service ones.
+These service scripts perform work of each synchronization operation:
 
-Also you can install git-sync to your system from sources:
+git-init.sh - performs cloning of origin remote repos to local directory
+git-pull.sh - performs fetch and pull from origin remote repo
+git-push.sh - performs push master branch to all custom remote repos
 
-$ make install
+You can use these manually. Just specify for each script argument with
+projects directory path. For example:
+
+$ git-init.sh /srv/sync
