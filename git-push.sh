@@ -4,6 +4,7 @@
 #
 # Example: git-push.sh /home/user/Projects
 
+CUSTOM_PROJECTS_DIR=0
 BIN_DIR="/usr/share/git-sync"
 
 if [ ! -d "$BIN_DIR" ]

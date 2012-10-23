@@ -16,8 +16,12 @@ fi
 
 # FIXME: Implement sync for several branch (add branch list variable)
 
-./git-init.sh "$PROJECTS_DIR"
+[ -z "$@" ] && echo "$USAGE"
 
-./git-pull.sh "$PROJECTS_DIR"
+$(is_param_exist "h" "$@") && echo "$USAGE"
 
-./git-push.sh "$PROJECTS_DIR"
+$(is_param_exist "i" "$@") && ./git-init.sh "$PROJECTS_DIR"
+
+$(is_param_exist "l" "$@") && ./git-pull.sh "$PROJECTS_DIR"
+
+$(is_param_exist "s" "$@") && ./git-push.sh "$PROJECTS_DIR"

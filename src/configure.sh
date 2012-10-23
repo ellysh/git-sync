@@ -15,7 +15,7 @@ fi
 
 . "$CONFIG_DIR/git-sync.conf"
 
-if [ -n "$1" ]
+if [ $CUSTOM_PROJECTS_DIR ]
 then
     # Data for the git-pull.sh and git-push.sh scripts
     PROJECTS_DIR="$1"
@@ -34,3 +34,13 @@ txtbld=$(tput bold)             # Bold
 bldred=${txtbld}$(tput setaf 1) # red
 bldgre=${txtbld}$(tput setaf 2) # green
 bldwht=${txtbld}$(tput setaf 7) # white
+
+USAGE="Usage: git-sync.sh [OPTIONS]
+Examples:
+    git-sync.sh -ils    # perform all sync operations
+
+Options:
+    -i - init local repos
+    -l - fetch and pull origin repos to local ones
+    -s - push local repos to origin ones
+    -h - print help"

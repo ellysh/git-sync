@@ -35,3 +35,16 @@ get_repo_name()
 
     echo "$RESULT"
 }
+
+is_param_exist()
+{
+    PARAM="$1"
+    CMD="$2"
+
+    if [ "$(echo "$CMD" | grep "$PARAM")" = "" ]
+    then
+        return 1
+    else
+        return 0
+    fi
+}
