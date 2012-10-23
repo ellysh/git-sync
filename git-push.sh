@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Script to push origin for local git repositories in the subdirs
+# Script to push origin repo to custom remote git repos in the subdirs
 #
 # Example: git-push.sh /home/user/Projects
 

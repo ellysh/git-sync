@@ -26,9 +26,8 @@ echo $(pwd)
 
 ./remote-repos.sh
 
-./origin-pull.sh
-
-./repos-push.sh
-
-
 restore_directory
+
+./git-pull.sh "$PROJECTS_DIR"
+
+./git-push.sh "$PROJECTS_DIR"

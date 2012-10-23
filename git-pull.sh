@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Script to pull origin for local git repositories in the subdirs
+# Script to pull origin repo to local git repos in the subdirs
 #
 # Example: git-pull.sh /home/user/Projects
 
