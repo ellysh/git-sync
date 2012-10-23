@@ -1,3 +1,10 @@
+git-sync (1.8) maverick; urgency=low
+
+  * Implement primary and secondary origin repo supporting
+  * Add checking to differences under push operations
+
+ -- Ilya Shpigor <petrsum@gmail.com>  Tue, 23 Oct 2012 18:09:45 +0400
+
 git-sync (1.7) maverick; urgency=low
 
   * Implement command line arguments and service scripts

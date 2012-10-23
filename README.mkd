@@ -1,4 +1,4 @@
-# Git-sync 1.7 README
+# Git-sync 1.8 README
 
 ## INTRODUCTION
 
@@ -31,15 +31,19 @@ $ make install
 
 ## CONFIGURE
 
-Specify for configuration you repositories next data:
+Specify next data to configure your repositories synchronization:
 
-  * Set project names in conf/projects.conf file.
+  * Set project names to synchronize in conf/projects.conf file.
 
-  * Set hostnames (with username and path) of git servers in conf/servers.conf
-file.
+  * Set connection strings (hostnames with username and path) for git servers
+in conf/servers.conf file.
 
-  * Set the original git server hostname (ORIGIN_REPO) in
-conf/git-sync.conf file.
+  * Set the original git primary server connection string
+(PRIMARY_ORIGIN_REPO) in conf/git-sync.conf file.
+
+  * Set the original git secondary server connection string
+(SECONDARY_ORIGIN_REPO) in conf/git-sync.conf file. It will be used if target
+project is unavailable from primary repo.
 
   * Set local directory for temporary files (PROJECTS_DIR) in
 conf/git-sync.conf file.
