@@ -16,17 +16,7 @@ fi
 
 # FIXME: Implement sync for several branch (add branch list variable)
 
-cd_safe $BIN_DIR
-
-echo $(pwd)
-
-./ssh-keys.sh
-
-./local-projects.sh
-
-./remote-repos.sh
-
-restore_directory
+./git-init.sh "$PROJECTS_DIR"
 
 ./git-pull.sh "$PROJECTS_DIR"
 
