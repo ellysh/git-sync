@@ -6,11 +6,9 @@
 
 check_projects()
 {
-    EXIST_PROJECTS=$(ls $PROJECTS_DIR)
-
     for CHECK_PROJECT in $PROJECTS
     do
-        if [ "$(echo $EXIST_PROJECTS | grep -w $CHECK_PROJECT )" = "" ]
+        if [ ! -d "$PROJECTS_DIR/$CHECK_PROJECT" ]
         then
             clone_project "$CHECK_PROJECT"
         fi
