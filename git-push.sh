@@ -5,21 +5,21 @@
 # Example: git-push.sh /home/user/Projects
 
 CUSTOM_PROJECTS_DIR=0
-BIN_DIR="/usr/share/git-sync"
+SRC_DIR="/usr/share/git-sync"
 
-if [ ! -d "$BIN_DIR" ]
+if [ ! -d "$SRC_DIR" ]
 then
-    BIN_DIR="./src"
+    SRC_DIR="./src"
 fi
 
-. "$BIN_DIR/configure.sh"
-. "$BIN_DIR/functions.sh"
+. "$SRC_DIR/configure.sh"
+. "$SRC_DIR/functions.sh"
 
 PROJECTS_DIR="$1"
 
 # FIXME: Check for dependecy application (git-core, etc...)
 
-cd_safe $BIN_DIR
+cd_safe $SRC_DIR
 
 echo $(pwd)
 

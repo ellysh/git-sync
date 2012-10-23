@@ -2,15 +2,17 @@
 
 # Script for synchronisation git repositories
 
-BIN_DIR="/usr/share/git-sync"
+SRC_DIR="/usr/share/git-sync"
+USR_BIN_DIR="/usr/bin"
 
-if [ ! -d "$BIN_DIR" ]
+if [ ! -d "$SRC_DIR" ]
 then
-    BIN_DIR="./src"
+    SRC_DIR="./src"
+    USR_BIN_DIR="."
 fi
 
-. "$BIN_DIR/configure.sh"
-. "$BIN_DIR/functions.sh"
+. "$SRC_DIR/configure.sh"
+. "$SRC_DIR/functions.sh"
 
 # FIXME: Check for dependecy application (git-core, etc...)
 
@@ -20,8 +22,8 @@ fi
 
 $(is_param_exist "h" "$@") && echo "$USAGE"
 
-$(is_param_exist "i" "$@") && ./git-init.sh "$PROJECTS_DIR"
+$(is_param_exist "i" "$@") && "$USR_BIN_DIR/git-init.sh" "$PROJECTS_DIR"
 
-$(is_param_exist "l" "$@") && ./git-pull.sh "$PROJECTS_DIR"
+$(is_param_exist "l" "$@") && "$USR_BIN_DIR/git-pull.sh" "$PROJECTS_DIR"
 
-$(is_param_exist "s" "$@") && ./git-push.sh "$PROJECTS_DIR"
+$(is_param_exist "s" "$@") && "$USR_BIN_DIR/git-push.sh" "$PROJECTS_DIR"
