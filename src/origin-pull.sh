@@ -16,7 +16,7 @@ check_origin_diff()
     echo "${bldwht}Project $PROJECT - git fetch origin$(tput sgr0)"
     git fetch origin
 
-    if [ "$(git diff origin/master)" != "" ]
+    if [ -n "$(git diff origin/master --raw)" ]
     then
         echo "${bldwht}Project $PROJECT - git pull origin master$(tput sgr0)"
         git pull origin master

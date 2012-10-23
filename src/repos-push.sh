@@ -19,11 +19,25 @@ repos_push()
     do
         REPO_NAME=$(get_repo_name $REPO)
 
+        $(is_diff_empty "$REPO_NAME") && continue
+
         echo "${bldgre}Project $PROJECT - git push $REPO_NAME master$(tput sgr0)"
         git push $REPO_NAME master
     done
 
     restore_directory
+}
+
+is_diff_empty()
+{
+    REPO_NAME="$1"
+
+    if [ -z "$(git diff "$REPO_NAME"/master --raw)" ]
+    then
+        return 0
+    else
+        return 1
+    fi
 }
 
 
