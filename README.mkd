@@ -2,7 +2,7 @@
 
 ## INTRODUCTION
 
-This is set of scripts for git servers synchronization.
+This is set of scripts to synchronize git repositories for several servers
 
 ## HOW IT WORKS
 
