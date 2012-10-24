@@ -53,11 +53,11 @@ is_remote_repo_not_exist()
 {
     REPO="$1"
     PROJECT="$2"
+    ANSWER="$(git ls-remote "$REPO$PROJECT.git" 2>&1)"
 
-    if [ -z "$(echo "$(git ls-remote "$REPO$PROJECT.git")" 2>&1 | grep HEAD)" ]
-    then
-        return 0
-    else
-        return 1
-    fi
+
+    [ -z "$ANSWER" ]  && return 1
+    [ -z "$(echo "$ANSWER" | grep HEAD)" ] && return 0
+
+    return 1
 }

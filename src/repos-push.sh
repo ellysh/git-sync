@@ -32,7 +32,7 @@ is_diff_empty()
 {
     REPO_NAME="$1"
 
-    if [ -z "$(git diff "$REPO_NAME"/master --raw)" ]
+    if [ -z "$(git diff "$REPO_NAME"/master --raw 2>&1)" ]
     then
         return 0
     else
