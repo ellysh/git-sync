@@ -2,9 +2,6 @@
 
 # Script for check and clone projects to local directory
 
-. ./configure.sh
-. ./functions.sh
-
 check_projects()
 {
     for PROJECT in $PROJECTS
@@ -32,5 +29,7 @@ clone_project()
     return 0
 }
 
+
+mkdir -p "$PROJECTS_DIR"
 
 check_projects

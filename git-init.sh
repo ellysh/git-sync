@@ -12,21 +12,14 @@ then
     SRC_DIR="./src"
 fi
 
-. "$SRC_DIR/configure.sh"
+. "$SRC_DIR/config_parser.sh"
+. "$SRC_DIR/globals.sh"
 . "$SRC_DIR/functions.sh"
 
 PROJECTS_DIR="$1"
 
-# FIXME: Check for dependecy application (git-core, etc...)
+. "$SRC_DIR/ssh-keys.sh"
 
-cd_safe $SRC_DIR
+. "$SRC_DIR/local-projects.sh"
 
-echo $(pwd)
-
-./ssh-keys.sh
-
-./local-projects.sh
-
-./remote-repos.sh
-
-restore_directory
+. "$SRC_DIR/remote-repos.sh"

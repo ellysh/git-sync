@@ -2,8 +2,6 @@
 
 # Script for check and add the ssh keys for git servers
 
-. ./configure.sh
-
 check_ssh_keys()
 {
     SSH_AGENT_KEYS=$(ssh-add -l)

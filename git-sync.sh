@@ -11,10 +11,9 @@ then
     USR_BIN_DIR="."
 fi
 
-. "$SRC_DIR/configure.sh"
+. "$SRC_DIR/config_parser.sh"
+. "$SRC_DIR/globals.sh"
 . "$SRC_DIR/functions.sh"
-
-# FIXME: Check for dependecy application (git-core, etc...)
 
 # FIXME: Implement sync for several branch (add branch list variable)
 

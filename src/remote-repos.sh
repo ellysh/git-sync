@@ -2,10 +2,6 @@
 
 # Script for check remote git repos in the local projects
 
-. ./configure.sh
-. ./functions.sh
-
-
 check_repos()
 {
     PROJECT="$1"

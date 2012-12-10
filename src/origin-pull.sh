@@ -2,9 +2,6 @@
 
 # Script for pull origin repo for all projects
 
-. ./configure.sh
-. ./functions.sh
-
 check_origin_diff()
 {
     PROJECT="$1"
@@ -25,8 +22,6 @@ check_origin_diff()
     restore_directory
 }
 
-
-mkdir -p "$PROJECTS_DIR"
 
 for CHECK_PROJECT in $PROJECTS
 do
