@@ -5,13 +5,13 @@
 cd_safe()
 {
   # Save current directory
-  cd $1
+  cd $1 > /dev/null
 }
 
 restore_directory()
 {
   # Restore saved by cd_safe() directory
-  cd -
+  cd - > /dev/null
 }
 
 get_repo_name()

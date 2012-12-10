@@ -16,7 +16,6 @@ fi
 . "$SRC_DIR/globals.sh"
 . "$SRC_DIR/functions.sh"
 
-PROJECTS_DIR="$1"
 
 . "$SRC_DIR/ssh-keys.sh"
 
