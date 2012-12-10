@@ -26,6 +26,8 @@ check_origin_diff()
 }
 
 
+mkdir -p "$PROJECTS_DIR"
+
 for CHECK_PROJECT in $PROJECTS
 do
     check_origin_diff "$CHECK_PROJECT"

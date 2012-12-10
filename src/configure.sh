@@ -15,7 +15,7 @@ fi
 
 . "$CONFIG_DIR/git-sync.conf"
 
-if [ $CUSTOM_PROJECTS_DIR ]
+if [ "$CUSTOM_PROJECTS_DIR" = 1 ]
 then
     # Data for the git-pull.sh and git-push.sh scripts
     PROJECTS_DIR="$1"
@@ -27,6 +27,8 @@ else
 fi
 
 SSH_KEYS=$(cat "$CONFIG_DIR/keys.conf")
+
+[ -n "$SSH_KEY_PATH" ] || SSH_KEY_PATH=$HOME/.ssh
 
 # Text color variables
 txtund=$(tput sgr 0 1)          # Underline
