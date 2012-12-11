@@ -2,6 +2,7 @@
 
 # Script for synchronisation git repositories
 
+CUSTOM_PROJECTS_DIR="0"
 SRC_DIR="/usr/share/git-sync"
 USR_BIN_DIR="/usr/bin"
 

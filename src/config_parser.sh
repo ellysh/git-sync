@@ -15,7 +15,7 @@ fi
 
 . "$CONFIG_DIR/git-sync.conf"
 
-if [ "$CUSTOM_PROJECTS_DIR" = 1 ]
+if [ "$CUSTOM_PROJECTS_DIR" = "1" ]
 then
     # Data for the git-pull.sh and git-push.sh scripts
     PROJECTS_DIR="$1"

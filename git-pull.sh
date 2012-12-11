@@ -4,7 +4,7 @@
 #
 # Example: git-pull.sh /home/user/Projects
 
-CUSTOM_PROJECTS_DIR=0
+[ "$CUSTOM_PROJECTS_DIR" = "" ] && CUSTOM_PROJECTS_DIR="1"
 SRC_DIR="/usr/share/git-sync"
 
 if [ ! -d "$SRC_DIR" ]
