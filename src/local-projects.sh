@@ -20,7 +20,7 @@ clone_project()
     PROJECT="$2"
 
     [ "$PROJECT" = "" ] && return 1
-    is_remote_repo_not_exist "$REPO" "$PROJECT" && return 1
+    ! is_remote_repo_exist "$REPO" "$PROJECT" && return 1
 
     echo "${bldwht}Project $PROJECT - git clone$(tput sgr0)"
     echo "git clone "$REPO$PROJECT.git" "$PROJECTS_DIR/$PROJECT""

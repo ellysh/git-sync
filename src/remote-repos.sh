@@ -28,7 +28,7 @@ add_repo()
 
     [ "$ADD_REPO" = "" ] && return 0
     [ "$PROJECT" = "" ] && return 0
-    is_remote_repo_not_exist "$ADD_REPO" "$PROJECT" && return 0
+    ! is_remote_repo_exist "$ADD_REPO" "$PROJECT" && return 0
 
     cd_safe "$PROJECTS_DIR/$PROJECT"
 

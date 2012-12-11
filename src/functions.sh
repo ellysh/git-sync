@@ -43,15 +43,11 @@ is_param_exist()
     fi
 }
 
-is_remote_repo_not_exist()
+is_remote_repo_exist()
 {
     REPO="$1"
     PROJECT="$2"
-    ANSWER="$(git ls-remote "$REPO$PROJECT.git" 2>&1)"
 
-
-    [ -z "$ANSWER" ]  && return 1
-    [ -z "$(echo "$ANSWER" | grep HEAD)" ] && return 0
-
-    return 1
+    git ls-remote "$REPO$PROJECT.git"  > /dev/null 2>&1
+    return $?
 }
