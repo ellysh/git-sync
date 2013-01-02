@@ -20,6 +20,8 @@ fi
 
 [ -z "$@" ] && echo "$USAGE"
 
+export CUSTOM_PROJECTS_DIR="$CUSTOM_PROJECTS_DIR"
+
 $(is_param_exist "h" "$@") && echo "$USAGE"
 
 $(is_param_exist "i" "$@") && "$USR_BIN_DIR/git-init.sh" "$PROJECTS_DIR"
