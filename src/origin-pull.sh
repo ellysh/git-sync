@@ -16,7 +16,7 @@ check_origin_diff()
     if [ -n "$(git diff origin/master --raw)" ]
     then
         echo "${bldwht}Project $PROJECT - git pull origin master$(tput sgr0)"
-        git pull origin master
+        git pull origin master --tags
     fi
 
     restore_directory

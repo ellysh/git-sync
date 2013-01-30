@@ -19,7 +19,7 @@ repos_push()
         $(is_diff_empty "$REPO_NAME") && continue
 
         echo "${bldgre}Project $PROJECT - git push $REPO_NAME master$(tput sgr0)"
-        git push $REPO_NAME master
+        git push $REPO_NAME master --tags
     done
 
     restore_directory
